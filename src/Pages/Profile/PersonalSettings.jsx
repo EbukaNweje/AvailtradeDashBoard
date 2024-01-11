@@ -4,15 +4,15 @@ import axios from "axios";
 
 const PersonalSettings = ({data}) => {
 
-    const [fristName, setFristName] = useState()
+    const [firstName, setFristName] = useState()
     const [lastName, setLastName] = useState()
-    const [userName, setUserName] = useState()
+    const [gender, setGender] = useState()
     // const [email, setEmail] = useState()
     const [phoneNumber, setPhoneNumber] = useState()
     const [isButtonDisabled, setButtonDisabled] = useState(false);
      const [msg, setMsg] = useState()
 
-  const userinfo = {fristName, lastName, gender, phoneNumber}
+  const userinfo = {firstName, lastName, gender, phoneNumber}
 
     const updateuserurl = `https://availtrade-backendnew.onrender.com/api/userdata/${data._id}`
     const upDateUser = () => {
@@ -26,8 +26,8 @@ const PersonalSettings = ({data}) => {
       }
 
       const handleFullNameChange = (e) => {
-        const newFullName = e.target.value;
-        setFullName(newFullName);
+        const newFristName = e.target.value;
+        setFristName(newFristName);
       };
       
       const handlephoneNumberChange = (e) => {
@@ -35,13 +35,13 @@ const PersonalSettings = ({data}) => {
         setPhoneNumber(newPhoneNumber);
       }; 
     
-      const handleuserNameChange = (e) => {
-        const newFristName = e.target.value;
-        setUserName(newFristName);
+      const handlesetGender = (e) => {
+        const newGender = e.target.value;
+        setGender(newGender);
       };
       const handleLastnameChange = (e) => {
         const newLastName = e.target.value;
-        setUserName(newLastName);
+        setLastName(newLastName);
       };
     
 
@@ -78,7 +78,7 @@ const PersonalSettings = ({data}) => {
                     </div> */}
                     <div className="ProfileContentPSRow1B">
                         <p>Gender</p>
-                        <input type="text" placeholder={data.gender} onChange={handlephoneNumberChange} />
+                        <input type="text" placeholder={data.gender} onChange={handlesetGender} />
                     </div>
                 </div>
                <p style={{marginTop: "1%", marginLeft: "2%", color: "green", fontSize: "18px", fontFamily:"Nunito, sans-serif;"}}>{msg}</p>
