@@ -54,7 +54,7 @@ const PersonalSettings = ({data}) => {
                 <div className="ProfileContentPSRow1">
                     <div className="ProfileContentPSRow1A">
                         <p>Frist Name</p>
-                        <input type="text" placeholder={data.fristName} onChange={handleFullNameChange} />
+                        <input type="text" placeholder={data.firstName} onChange={handleFullNameChange} />
                     </div>
                     <div className="ProfileContentPSRow1B">
                         <p>Last Name</p>
