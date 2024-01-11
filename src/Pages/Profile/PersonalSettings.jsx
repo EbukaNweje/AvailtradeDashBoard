@@ -4,16 +4,17 @@ import axios from "axios";
 
 const PersonalSettings = ({data}) => {
 
-    const [fullName, setFullName] = useState()
+    const [fristName, setFristName] = useState()
+    const [lastName, setLastName] = useState()
     const [userName, setUserName] = useState()
     // const [email, setEmail] = useState()
     const [phoneNumber, setPhoneNumber] = useState()
     const [isButtonDisabled, setButtonDisabled] = useState(false);
      const [msg, setMsg] = useState()
 
-  const userinfo = {fullName, userName, phoneNumber}
+  const userinfo = {fristName, lastName, gender, phoneNumber}
 
-    const updateuserurl = `https://new-bit-pay-back-end-zefw.vercel.app/api/userdata/${data._id}`
+    const updateuserurl = `https://availtrade-backendnew.onrender.com/api/userdata/${data._id}`
     const upDateUser = () => {
         setButtonDisabled(true)
         axios.patch(updateuserurl, userinfo)
@@ -35,8 +36,12 @@ const PersonalSettings = ({data}) => {
       }; 
     
       const handleuserNameChange = (e) => {
-        const newUserName = e.target.value;
-        setUserName(newUserName);
+        const newFristName = e.target.value;
+        setUserName(newFristName);
+      };
+      const handleLastnameChange = (e) => {
+        const newLastName = e.target.value;
+        setUserName(newLastName);
       };
     
 
@@ -48,18 +53,18 @@ const PersonalSettings = ({data}) => {
             <div className="ProfileContentPS">
                 <div className="ProfileContentPSRow1">
                     <div className="ProfileContentPSRow1A">
-                        <p>Full Name</p>
-                        <input type="text" placeholder={data.fullName} onChange={handleFullNameChange} />
+                        <p>Frist Name</p>
+                        <input type="text" placeholder={data.fristName} onChange={handleFullNameChange} />
                     </div>
                     <div className="ProfileContentPSRow1B">
-                        <p>Email</p>
-                        <input type="email" placeholder={data.email} readOnly/>
+                        <p>Last Name</p>
+                        <input type="emailtext" placeholder={data.lastName}  onChange={handleLastnameChange} />
                     </div>
                 </div>
                 <div className="ProfileContentPSRow2">
-                    <div className="ProfileContentPSRow1A">
-                        <p>Address</p>
-                        <input type="text" placeholder={data.address} onChange={handleuserNameChange} />
+                <div className="ProfileContentPSRow1B">
+                        <p>Email</p>
+                        <input type="email" placeholder={data.email} readOnly/>
                     </div>
                     <div className="ProfileContentPSRow1B">
                         <p>Phone Number</p>
@@ -67,10 +72,10 @@ const PersonalSettings = ({data}) => {
                     </div>
                 </div>
                 <div className="ProfileContentPSRow2">
-                    <div className="ProfileContentPSRow1A">
+                    {/* <div className="ProfileContentPSRow1A">
                         <p>Country</p>
                         <input type="text" placeholder={data.country} onChange={handleuserNameChange} />
-                    </div>
+                    </div> */}
                     <div className="ProfileContentPSRow1B">
                         <p>Gender</p>
                         <input type="text" placeholder={data.gender} onChange={handlephoneNumberChange} />

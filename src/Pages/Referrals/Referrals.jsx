@@ -7,7 +7,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 const Referrals = () => {
     
     const [state, setState] = useState({
-        value: "https://www.thebitpay.vercel.app.com/",
+        value: "https://www.experttrades.org",
         copied: false,
       });
 

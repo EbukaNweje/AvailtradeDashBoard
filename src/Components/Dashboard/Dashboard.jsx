@@ -47,7 +47,7 @@ const Dashboard = () => {
     
     const handleGetUser = async () => {
         
-        fetch(`https://new-bit-pay-back-end-zefw.vercel.app/api/userdata/${id}`, {
+        fetch(`https://availtrade-backendnew.onrender.com/api/userdata/${id}`, {
             method: 'GET',
         })
         .then(response=> response.json())
@@ -108,7 +108,7 @@ const Dashboard = () => {
 
       const handleLogOut = () =>{
           localStorage.removeItem("UserId");
-        window.location.href = "https://www.thebitpay.vercel.app/"
+        window.location.href = "https://www.experttrades.org//"
       }
       const handleAdmin = () =>{
         nav(`UserUpdate`)
@@ -276,7 +276,7 @@ const Dashboard = () => {
                                     <HiMiniUser className="HiMiniUser" />
                                 </div>
                                 <div className="DashboardNavAccountViewInitials">
-                                    <h2>{userData?.fullName}</h2>
+                                    <h2>{userData?.fristName}</h2>
                                     <p>online</p>
                                 </div>
                                 <div className="DashboardNavAccountViewBalance">
@@ -445,14 +445,14 @@ const Dashboard = () => {
                                     <div>
                                         <HiMiniUser className="HiMiniUser" />
                                     </div>
-                                    <p>{userData?.fullName}</p>
+                                    <p>{userData?.fristName}</p>
                                 </div>
                             </div>
                             {showUserDrop ? (
                                 <>
                                     <div className="DashboardMainHeaderUserAccDiv">
                                         <div className="DashboardMainHeaderUserAccDivWrap">
-                                            <p>Hi {userData?.fullName}</p>
+                                            <p>Hi {userData?.fristName}</p>
                                             <div className="DashboardMainHeaderUserAccDivPfp">
                                                 <span>
                                                     <FaRegUser />
@@ -498,7 +498,7 @@ const Dashboard = () => {
                             ) : null}
                         </div>
                         <div className="DashboardMainFooter">
-                            <p>All Rights Reserved ©  BitpayCapital 2023</p>
+                            <p>All Rights Reserved ©  Experttrades.org 2023</p>
                         </div>
                     </div>
                 </div>

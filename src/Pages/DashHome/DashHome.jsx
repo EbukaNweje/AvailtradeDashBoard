@@ -47,7 +47,7 @@ const DashHome = ({homechange, planchange, Transactions}) => {
         <>
             <div className="DashHomeBody">
                 <h2 className="DashHomeHeaderText">
-                    Welcome, <span>{userData?.fullName}</span>
+                    Welcome, <span>{userData?.fristName}</span>
                     
                 </h2>
                 <div className="DashHomeInfoBox1">
