@@ -51,10 +51,10 @@ const DashHome = ({homechange, planchange, Transactions}) => {
                     
                 </h2>
                 <div className="DashHomeInfoBox1">
-                    <p>Welcome to Bitpay Capital, Forverver in Profits.</p>
+                    <p>Welcome to Experttrades, Forverver in Profits.</p>
                 </div>
                 <div className="DashHomeInfoBox2">
-                    <p>Welcome to Bitpay Capital</p>
+                    <p>Welcome to Experttrades</p>
                 </div>
                 <div className="DashHomeMainContent">
                     <div className="DashHomeMainContentAccSummaryDiv">

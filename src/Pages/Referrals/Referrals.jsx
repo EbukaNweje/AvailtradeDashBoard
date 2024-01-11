@@ -14,7 +14,7 @@ const Referrals = () => {
     return (
         <>
             <div className="ReferralBody">
-                <h1>Refer users to  Bitpay Capital community</h1>
+                <h1>Refer users to  Experttrades community</h1>
                 <div className="ReferralContent">
                     <div className="ReferralContentTop">
                         <div className="ReferralContentTopInputndLabel">
