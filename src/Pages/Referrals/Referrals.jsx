@@ -100,7 +100,6 @@ const Referrals = () => {
                         <div className="ReferralContentResultC">
                             <div className="ReferralContentResultCItem">
                                 <div className="ReferralContentResultC1">
-                                    {/* Mark Spence */}
                                 </div>
                                 <div className="ReferralContentResultC2">
                                     {/* Basic */}
